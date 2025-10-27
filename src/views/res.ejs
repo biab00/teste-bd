@@ -1,0 +1,17 @@
+<%if (result.colunas) { %>
+<ul>
+    <%for(let i = 0; i<result.resultados.length;i++) { %>
+    <li>
+        <h5>Tabela: <%=result.colunas[0].table%></h5>
+        <%for(let f = 0; f<result.colunas.length;f++) { %>
+        <p><%=result.colunas[f].name%>: <%=result.resultados[i][result.colunas[f].name]%> </p>
+    </li>
+    <%}}%>
+</ul>
+<%} else {%>
+    <p>Comando executado: Informações -></p>
+    <ul>
+        <li> Mensagem do BD: <%=result.resultados.info%> </li>
+        <li> Linhas modificadas: <%=result.resultados.affectedRows%> </li>
+    </ul>
+<%}%>
