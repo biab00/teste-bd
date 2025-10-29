@@ -6,7 +6,6 @@ const mostrar = async (req, res) => {
 }
 const config = async (req, res) => {
     const result = await model.config(req.body.comando);
-    console.log(result)
     if (result.sqlMessage) res.send("erro: "+result.sqlMessage);
     else res.render("res", {result})
 }

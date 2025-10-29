@@ -23,7 +23,6 @@ const mostrarDados = async () => {
 }
 
 const config = async (comando) => {
-    console.log("comando: "+comando)
     const result = await bd.promise().query(comando)
     .then(([rows, fields]) => {return {resultados: rows, colunas: fields}}
     )
