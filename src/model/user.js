@@ -31,4 +31,12 @@ const config = async (comando) => {
     return result
 }
 
+/*
+  const config = async (comando) => {
+  try (
+     const [rows, fields] = await bd.promise().query(comando)
+     return {resultados: rows, colunas: fields}
+    ) catch (erro) return erro
+*/
+
 module.exports = {mostrarDados, config}
