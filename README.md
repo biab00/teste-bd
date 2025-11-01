@@ -1,3 +1,5 @@
+rodar "npm install" no terminal
+
 a conexão é feita a com:
 const conn = sql.createConnection({
     host: "localhost",
